@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" pageWidth="595" pageHeight="400" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="d86e01b9-866d-414f-ad65-85f46d2357af">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     *
+FROM
+      transfer]]>
+	</queryString>
+	<field name="id" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="f_account" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="to_account" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="amount" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="75" splitType="Stretch">
+			<staticText>
+				<reportElement x="119" y="0" width="310" height="72" uuid="e83c43a3-126c-4597-a556-98d9ebd81d5f"/>
+				<textElement>
+					<font fontName="Arial Black" size="24"/>
+				</textElement>
+				<text><![CDATA[Money Transfer Report]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="72" width="555" height="1" uuid="a892e066-65bc-4a46-874c-f66814bade62"/>
+			</line>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band height="170" splitType="Stretch">
+			<textField>
+				<reportElement x="142" y="7" width="100" height="20" uuid="d259c866-ded0-48da-aa68-0a6da70595e9"/>
+				<textFieldExpression><![CDATA[$F{f_account}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="142" y="46" width="100" height="20" uuid="1cf8aa2b-e41f-4448-aed3-a2940a246e32"/>
+				<textFieldExpression><![CDATA[$F{to_account}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="142" y="86" width="100" height="20" uuid="0a72e861-8875-401a-a68d-7ce1085d066d"/>
+				<textFieldExpression><![CDATA[$F{amount}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="19" y="7" width="100" height="20" uuid="e28e5207-8251-46a0-bdc5-8c701c9cf60c"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[From Account]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="19" y="46" width="100" height="20" uuid="065035d4-c2c5-497e-8856-fa6710aa36a0"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[To Account]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="19" y="86" width="100" height="20" uuid="b5588fc0-a069-48ed-828a-1f3bcb02578a"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Amount]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="264" y="150" width="100" height="20" uuid="0f981d53-a3ce-4128-891e-ddc9b8319c89"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Date]]></text>
+			</staticText>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="390" y="150" width="154" height="20" uuid="e557a450-0eab-4052-a1bb-619df908612a"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
