@@ -1,4 +1,4 @@
-Softwares: Netbeans IDE 8.2
+Softwares: Netbeans IDE 8.2, XAMPP
 
 Steps:
 
