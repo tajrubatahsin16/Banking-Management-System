@@ -4,4 +4,6 @@ Steps:
 
 1) Open netbeans and open the project Banking Management System. Run the project.
 
-2) Add and import all the needed jar files. 
+2) Add and import all the needed jar files.
+
+3) Set up Xampp on your pc. You have to use this for database.
